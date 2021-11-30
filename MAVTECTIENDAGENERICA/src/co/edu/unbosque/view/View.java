@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
 
 
 public class View extends JFrame  {
+	private Panel_Presentacion pPrest;
 	//
 	private Panel_Modulo1 pMod1;
 	//
@@ -54,8 +55,13 @@ public class View extends JFrame  {
 	}
 
 	public void inicializarComponentes() {
+		
+		pPrest = new Panel_Presentacion();
+		pPrest.setBounds(-7,-15,500,400);
+		getContentPane().add(pPrest);
+		
 		pMod1 = new Panel_Modulo1();
-		pMod1.setBounds(-7,-20,500,400);
+		pMod1.setBounds(10,10,500,400);
 		getContentPane().add(pMod1);
 
 		pVentas = new Panel_Ventas();
@@ -140,6 +146,21 @@ public class View extends JFrame  {
 	}
 	
 	
+	public Panel_Presentacion getpPrest() {
+		return pPrest;
+	}
+	public void setpPrest(Panel_Presentacion pPrest) {
+		this.pPrest = pPrest;
+	}
+	public Dialog_ListadoClientes getDialog_listadoClientes() {
+		return dialog_listadoClientes;
+	}
+	public void setDialog_listadoClientes(Dialog_ListadoClientes dialog_listadoClientes) {
+		this.dialog_listadoClientes = dialog_listadoClientes;
+	}
+	public void setDialog_ventasCliente(Dialog_VentasCliente dialog_ventasCliente) {
+		this.dialog_ventasCliente = dialog_ventasCliente;
+	}
 	public Panel_CrearCliente getcClientes() {
 		return cClientes;
 	}

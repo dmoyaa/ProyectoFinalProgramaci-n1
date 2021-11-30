@@ -36,7 +36,7 @@ public class Panel_Modulo1 extends JPanel {
 	public Panel_Modulo1() {
 		setLayout(null);
 		inicializarComponentes();
-		setVisible(true);
+		setVisible(false);
 	}
 
 	public void inicializarComponentes() {
